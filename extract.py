@@ -107,7 +107,7 @@ def generate_map_gui():
                 if doc['_id'] == users[user_select]['TripDocuments'][date_select]['_id']:
                     pos_json = doc['PositionList']
 
-    create_range_map(users[user_select], date_select, start_range, end_range, pos_json, False)
+    create_range_map(users[user_select], date_select, start_range, end_range, pos_json, True)
     print('\nMap created in plots/result.html')
 
 
