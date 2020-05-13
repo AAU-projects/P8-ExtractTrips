@@ -11,7 +11,7 @@ import collections
 #         self.coloricon = self.coloricon.replace('/', '\\').replace('\\', '\\\\')
 
 
-def create_range_map(user_json, date, start, end):
+def create_range_map(user_json, date, start, end, position_json, show_trips):
     nice_colors = collections.deque(['#006699', '#6e4673', '#649e0b', '#f6921e', '#d14343', '#00afaf', '#66bbed', '#95609c', '#a1c964', '#faaf40', '#e56f6f', '#46dbdb'])
 
     start_set = False
@@ -28,7 +28,7 @@ def create_range_map(user_json, date, start, end):
         # Set the start of the map at the first trip.
         if not start_set:
             gmap = gmplot.GoogleMapPlotter(latt_list[0], long_list[0], 13)
-            gmap.apikey = 'API KEY HERE PLEASE'
+            gmap.apikey = 'AIzaSyDPVbZkJPURllC7bFlR44iZhoLfwNSS5JI'
             start_set = True
 
         color = None
@@ -38,17 +38,30 @@ def create_range_map(user_json, date, start, end):
             color = nice_colors[0]
             nice_colors.popleft()
         gmap.plot(latt_list, long_list, color, edge_width=5)
-        gmap.marker(latt_list[0], long_list[0], '#4682B4', title=f'TRIP: {str(i)}')
-        gmap.marker(latt_list[-1], long_list[-1], '#B22222', title=f'TRIP: {str(i)}')
+
+        # Add markers for trip.
+        if show_trips:
+            for idx, log in enumerate(user_json['TripDocuments'][date]['TripList'][i]['TripPositions']):
+                if idx == 0:
+                    gmap.marker(float(log['Latitude']['$numberDouble']), float(log['Longitude']['$numberDouble']), '#7FFF00', title=f'TRIP: {str(i)} START')
+                elif idx == len(user_json['TripDocuments'][date]['TripList'][i]['TripPositions']) + 1:
+                    gmap.marker(float(log['Latitude']['$numberDouble']), float(log['Longitude']['$numberDouble']), '#A52A2A', title=f'TRIP: {str(i)} END')
+                else:
+                    gmap.marker(float(log['Latitude']['$numberDouble']), float(log['Longitude']['$numberDouble']), '#4682B4')
+
+    # Add markers for positions.
+    if not show_trips:
+        for pos in position_json:
+            gmap.marker(float(pos['Latitude']['$numberDouble']), float(pos['Longitude']['$numberDouble']), '#FFA500')
 
     gmap.draw(os.path.join(os.getcwd(), 'plots', f'result.html'))
 
 
 def generate_map_gui():
     # Load JSON.
-    collections = open('raw.json', 'r').readlines()
+    collection = open('raw.json', 'r').readlines()
     users = []
-    for user in collections:
+    for user in collection:
         users.append(json.loads(user))
 
     # Select user.
@@ -82,7 +95,19 @@ def generate_map_gui():
     start_range = int(input('Start range: '))
     end_range = int(input('End range: '))
 
-    create_range_map(users[user_select], date_select, start_range, end_range)
+    # Get positions for user.
+    pos_collection = open('rawPos.json', 'r').readlines()
+    pos_json = None
+    for user_positions in pos_collection:
+        user_pos_data = json.loads(user_positions)
+
+        if user_pos_data['_id'] == users[user_select]['_id']:
+            # Get pos doc for selected date.
+            for doc in user_pos_data['Documents']:
+                if doc['_id'] == users[user_select]['TripDocuments'][date_select]['_id']:
+                    pos_json = doc['PositionList']
+
+    create_range_map(users[user_select], date_select, start_range, end_range, pos_json, False)
     print('\nMap created in plots/result.html')
 
 
