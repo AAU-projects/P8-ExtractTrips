@@ -28,7 +28,7 @@ def create_range_map(user_json, date, start, end):
         # Set the start of the map at the first trip.
         if not start_set:
             gmap = gmplot.GoogleMapPlotter(latt_list[0], long_list[0], 13)
-            gmap.apikey = 'AIzaSyDPVbZkJPURllC7bFlR44iZhoLfwNSS5JI'
+            gmap.apikey = 'API KEY HERE PLEASE'
             start_set = True
 
         color = None
