@@ -45,7 +45,7 @@ def create_range_map(user_json, date, start, end, position_json, show_trips):
             start_set = True
 
         for log in user_json['TripDocuments'][date]['TripList'][i]['TripPositions']:
-            gmap.marker(float(log['Latitude']['$numberDouble']), float(log['Longitude']['$numberDouble']), color=map_marker)
+            gmap.marker(float(log['Latitude']['$numberDouble']), float(log['Longitude']['$numberDouble']), color=map_marker, title=f"SPEED: {log['Speed']}")
 
         color = None
         if nice_colors.count == 0:

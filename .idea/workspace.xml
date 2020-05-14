@@ -6,6 +6,8 @@
       <change beforePath="$PROJECT_DIR$/extract.py" beforeDir="false" afterPath="$PROJECT_DIR$/extract.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plots/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/plots/result.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/raw.json" beforeDir="false" afterPath="$PROJECT_DIR$/raw.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/raw2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rawPos.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,18 +35,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/extractSingleUser.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Workspaces\ExtractTrips" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Workspaces\ExtractTrips" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Workspaces\ExtractTrips" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.extractSingleUser">
     <configuration name="extract" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="ExtractTrips" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -67,6 +69,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="extractSingleUser" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="ExtractTrips" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Workspaces\ExtractTrips\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/extractSingleUser.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.extract" />
+      <item itemvalue="Python.extractSingleUser" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -84,7 +112,10 @@
       <workItem from="1589308817506" duration="5184000" />
       <workItem from="1589353718188" duration="11858000" />
       <workItem from="1589388779925" duration="16000" />
-      <workItem from="1589441111744" duration="2448000" />
+      <workItem from="1589441111744" duration="3603000" />
+      <workItem from="1589446209825" duration="64000" />
+      <workItem from="1589447109182" duration="3632000" />
+      <workItem from="1589456665422" duration="247000" />
     </task>
     <servers />
   </component>
@@ -92,58 +123,58 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="734" y="356" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589281523308">
+    <state x="734" y="356" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589456672855">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="734" y="356" key="#com.intellij.execution.impl.EditConfigurationsDialog/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1589281523308" />
+    <state x="734" y="356" key="#com.intellij.execution.impl.EditConfigurationsDialog/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1589456672855" />
     <state x="92" y="92" width="2376" height="1216" key="DiffContextDialog" timestamp="1589283282554">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="92" y="92" width="2376" height="1216" key="DiffContextDialog/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1589283282554" />
-    <state x="1060" y="456" key="FileChooserDialogImpl" timestamp="1589281521500">
+    <state x="1060" y="456" key="FileChooserDialogImpl" timestamp="1589455716382">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1060" y="456" key="FileChooserDialogImpl/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1589281521500" />
-    <state width="2517" height="319" key="GridCell.Tab.0.bottom" timestamp="1589443397953">
+    <state x="1060" y="456" key="FileChooserDialogImpl/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1589455716382" />
+    <state width="2517" height="319" key="GridCell.Tab.0.bottom" timestamp="1589457012652">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="234" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1589287554853" />
-    <state width="2517" height="319" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1589443397953" />
-    <state width="2517" height="319" key="GridCell.Tab.0.center" timestamp="1589443397953">
+    <state width="2517" height="319" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1589457012652" />
+    <state width="2517" height="319" key="GridCell.Tab.0.center" timestamp="1589457012652">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="234" key="GridCell.Tab.0.center/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1589287554853" />
-    <state width="2517" height="319" key="GridCell.Tab.0.center/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1589443397953" />
-    <state width="2517" height="319" key="GridCell.Tab.0.left" timestamp="1589443397953">
+    <state width="2517" height="319" key="GridCell.Tab.0.center/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1589457012652" />
+    <state width="2517" height="319" key="GridCell.Tab.0.left" timestamp="1589457012652">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="234" key="GridCell.Tab.0.left/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1589287554852" />
-    <state width="2517" height="319" key="GridCell.Tab.0.left/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1589443397953" />
-    <state width="2517" height="319" key="GridCell.Tab.0.right" timestamp="1589443397953">
+    <state width="2517" height="319" key="GridCell.Tab.0.left/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1589457012652" />
+    <state width="2517" height="319" key="GridCell.Tab.0.right" timestamp="1589457012652">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="234" key="GridCell.Tab.0.right/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1589287554853" />
-    <state width="2517" height="319" key="GridCell.Tab.0.right/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1589443397953" />
-    <state width="2517" height="470" key="GridCell.Tab.1.bottom" timestamp="1589375778442">
+    <state width="2517" height="319" key="GridCell.Tab.0.right/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1589457012652" />
+    <state width="2517" height="470" key="GridCell.Tab.1.bottom" timestamp="1589456763744">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="470" key="GridCell.Tab.1.bottom/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1589286866698" />
-    <state width="2517" height="470" key="GridCell.Tab.1.bottom/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1589375778442" />
-    <state width="2517" height="470" key="GridCell.Tab.1.center" timestamp="1589375778442">
+    <state width="2517" height="470" key="GridCell.Tab.1.bottom/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1589456763744" />
+    <state width="2517" height="470" key="GridCell.Tab.1.center" timestamp="1589456763743">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="470" key="GridCell.Tab.1.center/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1589286866698" />
-    <state width="2517" height="470" key="GridCell.Tab.1.center/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1589375778442" />
-    <state width="2517" height="470" key="GridCell.Tab.1.left" timestamp="1589375778442">
+    <state width="2517" height="470" key="GridCell.Tab.1.center/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1589456763743" />
+    <state width="2517" height="470" key="GridCell.Tab.1.left" timestamp="1589456763743">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="470" key="GridCell.Tab.1.left/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1589286866698" />
-    <state width="2517" height="470" key="GridCell.Tab.1.left/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1589375778442" />
-    <state width="2517" height="470" key="GridCell.Tab.1.right" timestamp="1589375778442">
+    <state width="2517" height="470" key="GridCell.Tab.1.left/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1589456763743" />
+    <state width="2517" height="470" key="GridCell.Tab.1.right" timestamp="1589456763744">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="470" key="GridCell.Tab.1.right/-2560.0.2560.1400/0.0.2560.1400@-2560.0.2560.1400" timestamp="1589286866698" />
-    <state width="2517" height="470" key="GridCell.Tab.1.right/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1589375778442" />
+    <state width="2517" height="470" key="GridCell.Tab.1.right/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1589456763744" />
     <state x="1071" y="289" key="SettingsEditor" timestamp="1589354276814">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -155,6 +186,7 @@
     <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1589354948241" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ExtractTrips$extract.coverage" NAME="extract Coverage Results" MODIFIED="1589443397949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ExtractTrips$extract.coverage" NAME="extract Coverage Results" MODIFIED="1589448310596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ExtractTrips$extractSingleUser.coverage" NAME="extractSingleUser Coverage Results" MODIFIED="1589457012646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
