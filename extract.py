@@ -20,6 +20,19 @@ def create_range_map(user_json, date, start, end, position_json, show_trips):
     for i in range(start, end + 1):
         latt_list = []
         long_list = []
+
+        transport = int(user_json['TripDocuments'][date]['TripList'][i]['Transport']['$numberInt'])
+        print(transport)
+
+        if transport == 0:  # WALK
+            map_marker = '#000000'
+        elif transport == 1:  # BIKE
+            map_marker = '#0000FF'
+        elif transport == 2:  # CAR
+            map_marker = '#0000CD'
+        else:  # TRANSIT
+            map_marker = '#00BFFF'
+
         # Go through logs in a trip.
         for log in user_json['TripDocuments'][date]['TripList'][i]['TripPositions']:
             latt_list.append(float(log['Latitude']['$numberDouble']))
@@ -31,6 +44,9 @@ def create_range_map(user_json, date, start, end, position_json, show_trips):
             gmap.apikey = 'AIzaSyDPVbZkJPURllC7bFlR44iZhoLfwNSS5JI'
             start_set = True
 
+        for log in user_json['TripDocuments'][date]['TripList'][i]['TripPositions']:
+            gmap.marker(float(log['Latitude']['$numberDouble']), float(log['Longitude']['$numberDouble']), color=map_marker)
+
         color = None
         if nice_colors.count == 0:
             color = "#%06x" % random.randint(0, 0xFFFFFF)
@@ -39,7 +55,7 @@ def create_range_map(user_json, date, start, end, position_json, show_trips):
             nice_colors.popleft()
         gmap.plot(latt_list, long_list, color, edge_width=5)
 
-        # Add markers for trip.
+        ''''# Add markers for trip.
         if show_trips:
             for idx, log in enumerate(user_json['TripDocuments'][date]['TripList'][i]['TripPositions']):
                 if idx == 0:
@@ -48,6 +64,7 @@ def create_range_map(user_json, date, start, end, position_json, show_trips):
                     gmap.marker(float(log['Latitude']['$numberDouble']), float(log['Longitude']['$numberDouble']), '#A52A2A', title=f'TRIP: {str(i)} END')
                 else:
                     gmap.marker(float(log['Latitude']['$numberDouble']), float(log['Longitude']['$numberDouble']), '#4682B4')
+        '''
 
     # Add markers for positions.
     if not show_trips:
@@ -95,7 +112,8 @@ def generate_map_gui():
     start_range = int(input('Start range: '))
     end_range = int(input('End range: '))
 
-    # Get positions for user.
+    pos_json = None
+    ''''# Get positions for user.
     pos_collection = open('rawPos.json', 'r').readlines()
     pos_json = None
     for user_positions in pos_collection:
@@ -105,7 +123,7 @@ def generate_map_gui():
             # Get pos doc for selected date.
             for doc in user_pos_data['Documents']:
                 if doc['_id'] == users[user_select]['TripDocuments'][date_select]['_id']:
-                    pos_json = doc['PositionList']
+                    pos_json = doc['PositionList']'''
 
     create_range_map(users[user_select], date_select, start_range, end_range, pos_json, True)
     print('\nMap created in plots/result.html')
